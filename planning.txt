@@ -1,0 +1,19 @@
+    Concentraion game 
+- Every game has 3 chances (lives)
+- The game has 3 levels (easy '4x4', medium'6x6', hard'8x8')
+- No more than 2 cards open at once 
+- The theme will be Animals 
+
+    User Stories
+- As a user I want to see clear instructions 
+- As a user I want to see if the game is over 
+- As a user I want to see the remaining lives (chances) I have
+- As a user I want to be able to restart the game at any point during the game
+- As a user I want to see in which level I'm playing 
+- As a user I want to know when I lose or win 
+
+    Pseudocode
+- Click (eventListner) means show the card 
+- CSS should change (action) when the user chose it 
+- If the user chose 2 cards & they're mismatched, It will give him 3seconds then it will flip it back(hide)
+- If you exceed the number of lives, A lose message will show and the game freeze even if you win 
