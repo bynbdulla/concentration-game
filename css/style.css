@@ -17,6 +17,7 @@
 .board {
   margin-left: 12rem;
   justify-content: center;
+  width: 350px;
 }
 .live {
   width: 50px;
@@ -43,4 +44,7 @@ h1 {
 }
 .score{
     flex-direction:column;
+}
+.hidden{
+    display: none;
 }
