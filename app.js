@@ -1,19 +1,21 @@
 const brd = document.querySelector(".board");
-const sqr = document.querySelectorAll(".square");
-// const reset = document.querySelector(".reset");
+const cards = document.querySelectorAll(".square");
 const animals = document.querySelectorAll(".animals");
 
-let clickedSqr = ''
-let flipped = false;
-/// let clickedSqr = ''
+let flipped = [];
+let matched = false;
 
 brd.addEventListener("click", function (event) {
   let clickedSqr = event.target;
-  clickedSqr.classList.remove(".hidden");
-  console.log(clickedSqr);
-  // if (clickedSqr > 2 ){
-  //     // clickedSqr.classList.remove('.hidden')
-  // }
-  // if (clickedSqr === sqr[0] && clickedSqr === sqr[3]){
-  // }
+  let image = clickedSqr.querySelector(".animals");
+
+  if (flipped.length >= 2) {
+    return;
+  }
+  image.classList.remove("hidden");
+  flipped.push(clickedSqr);
+  console.log(flipped);
+
+let img = image.getAttribute("src")
+// if (img )
 });
