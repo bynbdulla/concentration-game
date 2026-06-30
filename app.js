@@ -12,6 +12,9 @@ function checkCards(flipped) {
 
   if (flipped[0].classList[1] === flipped[1].classList[1]) {
     matched = true;
+    flipped[0].style.backgroundColor = 'grey'
+    flipped[1].style.backgroundColor = 'grey'
+
     
   } else {
     setTimeout(function () {
@@ -20,6 +23,10 @@ function checkCards(flipped) {
     }, 1000);
     live[lives].style.visibility = "hidden";
     lives++;
+    if (lives === 5){
+
+        console.log("Game Over! 🥲");
+    }
   }
 }
 brd.addEventListener("click", function (event) {
