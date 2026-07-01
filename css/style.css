@@ -55,5 +55,25 @@ h1 {
 .hidden {
   display: none;
 }
-.disable {
+/* cannot click on the baord */
+.disabled {
+    pointer-events: none;
+}
+
+/* position the game over message */
+#message {
+position: absolute;
+  margin: auto;
+  top: 39%;
+  font-size: 15dvh;
+  background-color: white;
+  padding: 5px 15px;
+  border: 1.5px solid #f7a8b8;
+  border-radius: 10px;
+
+}
+
+/*  hide the game over message */
+.hidden {
+    visibility: hidden;
 }

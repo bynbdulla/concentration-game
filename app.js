@@ -2,6 +2,7 @@ const brd = document.querySelector(".board");
 const cards = document.querySelectorAll(".square");
 const animals = document.querySelectorAll(".animals");
 const live = document.querySelectorAll(".live");
+const msg = document.querySelector('h1')
 
 let flipped = [];
 
@@ -17,14 +18,17 @@ function checkCards(flipped) {
 
     
   } else {
+    
+      msg.textContent = 'Ooops 🥲'
     setTimeout(function () {
-      flipped[0].querySelector(".animals").classList.add("hidden");
-      flipped[1].querySelector(".animals").classList.add("hidden");
+        flipped[0].querySelector(".animals").classList.add("hidden");
+        flipped[1].querySelector(".animals").classList.add("hidden");
+        msg.textContent = 'FOCUS!! 👀'
     }, 1000);
     live[lives].style.visibility = "hidden";
     lives++;
     if (lives === 5){
-        console.log("Game Over! 🥲");
+        msg.textContent = ""
     }
   }
 }
