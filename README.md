@@ -1,31 +1,32 @@
-# Memory game 
-_a concentration game_
-![screenshot of the game](images/Screenshot%20(1076).png)
+# Animal memory game 
 
-_A brief description of your game_
+_a concentration game that will tests your memory finding pairs of cute animals.The rules are very easy, just flip 2 cards, and if they matched they will stay revealed. If their mismatched, they will flip back over. You have only 7 lives and you should find the pairs before you lose all your lives._
 
-![Screenshot or Logo](gameplay.png)
+![screenshot of the game](images/memory-cards.png)
 
 ## Getting Started
 
 ### Play the Game
 
-[Deployed Game Link](http://linktoyourgame.com)
+[Deployed Game Link](https://github.com/bynbdulla/concentration-game)
 
 
 ### How to Play
 
-1. **Start the Game**: Load the game in your browser to start your space adventure.
-2. **Guess Letters**: Click on the alphabet on your screen or use your keyboard to guess letters.
-3. Etc...
+1. **Start the Game**: The cards are hidden, and they are automatically shuffled when you open the page. 
+2. **Your first move**: Click on any 2 cards and they will reveal 
+3. **Find the pair**: If the 2 cards are matching, then the cards will stay visible. 
+4. **The lives**: Be careful that you have only 7 lives. Whenver you mismatch the cards you will lose one life. 
+5. **Win**: When you find all the matching pairs, then you win.
+6. **Restart**: Use the restart button to play again with shuffled cards. 
 
 ### Installation
 
 No installation required! Simply clone the repository to your local machine and open the `index.html` file in your favorite browser to start playing.
 
 ```bash
-git clone https://github.com/your-username/spaceman.git
-cd spaceman
+git clone https://github.com/bynbdulla/concentration-game
+cd concentration-game
 open index.html
 ```
 
@@ -37,17 +38,9 @@ open index.html
 
 ### Future Enhancements
 
-- example feature
-- example feature
+- adding score 
 
 ### Credits
-
-Link to any outside resources you used to complete this project, or thank your lovely IAs Zainab and Bidoor for all their help!
-
-
-### Contributing
-
-Feel free to fork this repository and submit pull requests to contribute to the development of Spaceman. For major changes, please open an issue first to discuss what you would like to change.
 
 
 ### License
