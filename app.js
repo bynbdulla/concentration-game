@@ -2,7 +2,7 @@ const brd = document.querySelector(".board");
 const cards = document.querySelectorAll(".square");
 const animals = document.querySelectorAll(".animals");
 const live = document.querySelectorAll(".live");
-const heading = document.querySelector("h1");
+const name = document.querySelector("#name");
 // const disable = document.querySelector(".disable");
 const msg = document.querySelector("#message");
 
@@ -18,19 +18,15 @@ function checkCards(flipped) {
     flipped[0].style.backgroundColor = "#D6D6D6";
     flipped[1].style.backgroundColor = "#D6D6D6";
   } else {
-    heading.textContent = "Ooops 🥲";
+    name.textContent = "Ooops 🥲";
 
     setTimeout(function () {
       flipped[0].querySelector(".animals").classList.add("hidden");
       flipped[1].querySelector(".animals").classList.add("hidden");
-      heading.textContent = "FOCUS!! 👀";
+      name.textContent = "FOCUS!! 👀";
     }, 1000);
     live[lives].style.visibility = "hidden";
     lives++;
-    if (lives === 5) {
-      brd.classList.add("disable");
-      heading.textContent = "";
-    }
   }
 }
 brd.addEventListener("click", function (event) {
@@ -45,6 +41,11 @@ brd.addEventListener("click", function (event) {
   if (flipped.length >= 2) {
     checkCards(flipped);
     flipped = [];
+    
+  }
+  if (lives === 5) {
+    msg.style.display = "block";
+    brd.classList.add('disable')
   }
 });
 
