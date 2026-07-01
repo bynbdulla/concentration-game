@@ -3,13 +3,14 @@ const cards = document.querySelectorAll(".square");
 const animals = document.querySelectorAll(".animals");
 const live = document.querySelectorAll(".live");
 const name = document.querySelector("#name");
-// const disable = document.querySelector(".disable");
+const restart = document.querySelector(".restart");
 const msg = document.querySelector("#message");
 console.log(cards);
 
 msg.style.display = "none";
 let lives = 0;
 let flipped = [];
+
 function checkCards(flipped) {
   let matched = false;
   console.log(flipped);
@@ -24,7 +25,7 @@ function checkCards(flipped) {
     setTimeout(function () {
       flipped[0].querySelector(".animals").classList.add("hidden");
       flipped[1].querySelector(".animals").classList.add("hidden");
-      name.textContent = "FOCUS!! 👀";
+      name.textContent = "FOCUS 👀";
     }, 1000);
 
     live[lives].style.visibility = "hidden";
@@ -53,5 +54,26 @@ brd.addEventListener("click", function (event) {
   }
 });
 
-// if lives ===3 or lives >= 3
-// then game over - board is disabled or message says game over
+restart.addEventListener("click", function () {
+  msg.style.display = "none";
+  lives = 0;
+  flipped = [];
+  brd.classList.remove("disable");
+  name.textContent = "Flip 2 cards and find pairs";
+  live.forEach(function (chance) {
+    chance.style.visibility = "visible";
+  });
+  cards.forEach(function(sqr){
+    sqr.querySelector('.animals').classList.add("hidden")
+    sqr.style.backgroundColor = ''
+  })
+});
+// sqr.forEach(function (square) {
+//     square.textContent = "";
+//     square.classList.remove("disable");
+//   });
+//   //   plX = true;
+//   //   plO = false;
+//   msg.textContent = "Player X, it's your turn";
+//   brd.classList.remove("disable");
+//   plX = true;
