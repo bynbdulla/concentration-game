@@ -14,7 +14,12 @@ let flipped = [];
 let matchedCount = 0 
 let totalPairs = cards.length / 2
 
-
+function shuffleBoard(){
+    cards.forEach(card => {
+        let shuffle = Math.floor(Math.random() * cards.length)
+        card.style.order = shuffle
+    })
+}
 function checkCards(flipped) {
     let matched = false;
     console.log(flipped);
@@ -85,4 +90,6 @@ restart.addEventListener("click", function () {
     sqr.style.backgroundColor = "";
   });
   matchedCount = 0
+  shuffleBoard()
 });
+shuffleBoard()
