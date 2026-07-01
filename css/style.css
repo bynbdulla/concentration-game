@@ -3,24 +3,27 @@
 }
 body {
   background-color: rgb(208, 255, 224);
+  margin: 0;
 }
 .square {
   border: 2.7px solid rgb(7, 7, 57);
   aspect-ratio: 1/1;
-  width: 110px;
+  width: 105px;
   justify-content: center; /* Centers horizontally */
   display: flex;
   justify-content: center; /* Centers horizontally */
   align-items: center;
   background-color: rgba(255, 255, 255, 0.605);
+  font-size:8.5dvh;
+  font-weight: 700;
 }
 .board {
   justify-content: center;
   display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    gap: 10px;
-    max-width: 600px;
-    margin: 0 auto;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
 }
 .live {
   width: 50px;
@@ -34,6 +37,7 @@ header {
   place-items: center;
   justify-content: space-between;
   background-color: #e7ffe5;
+  margin-top: 7px;
 }
 h1 {
   margin-left: 15rem;
@@ -41,7 +45,7 @@ h1 {
 .animals {
   width: 80px;
   place-items: center;
-  max-width: 80%;          /* Adjust size as needed */
+  max-width: 80%; /* Adjust size as needed */
   max-height: 80%;
   display: block;
 }
@@ -57,23 +61,27 @@ h1 {
 }
 /* cannot click on the baord */
 .disabled {
-    pointer-events: none;
+  pointer-events: none;
 }
 
 /* position the game over message */
 #message {
-position: absolute;
-  margin: auto;
-  top: 39%;
-  font-size: 15dvh;
+  position: absolute;
+  margin: auto 10rem;
+  top: 47%;
+  font-size: 10dvh;
   background-color: white;
-  padding: 5px 15px;
+  padding: 15px 15px;
   border: 1.5px solid #f7a8b8;
   border-radius: 10px;
-
+  width: 70%;
 }
 
 /*  hide the game over message */
 .hidden {
-    visibility: hidden;
+  visibility: hidden;
+}
+
+.card{
+    width: 80px;
 }

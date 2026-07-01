@@ -3,8 +3,10 @@ const cards = document.querySelectorAll(".square");
 const animals = document.querySelectorAll(".animals");
 const live = document.querySelectorAll(".live");
 const msg = document.querySelector('h1')
+const disable = document.querySelector()
 
 let flipped = [];
+
 
 let lives = 0;
 function checkCards(flipped) {
@@ -13,8 +15,8 @@ function checkCards(flipped) {
 
   if (flipped[0].classList[1] === flipped[1].classList[1]) {
     matched = true;
-    flipped[0].style.backgroundColor = 'grey'
-    flipped[1].style.backgroundColor = 'grey'
+    flipped[0].style.backgroundColor = '#D6D6D6'
+    flipped[1].style.backgroundColor = '#D6D6D6'
 
     
   } else {
@@ -34,7 +36,7 @@ function checkCards(flipped) {
 }
 brd.addEventListener("click", function (event) {
   let clickedSqr = event.target;
-
+  
   //   console.log(clickedSqr);
   let image = clickedSqr.querySelector(".animals");
   if (!clickedSqr.classList.contains("square")) return;
