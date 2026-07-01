@@ -24,7 +24,6 @@ function checkCards(flipped) {
     live[lives].style.visibility = "hidden";
     lives++;
     if (lives === 5){
-
         console.log("Game Over! 🥲");
     }
   }
