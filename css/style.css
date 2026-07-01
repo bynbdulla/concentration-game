@@ -37,7 +37,7 @@ header {
   place-items: center;
   justify-content: space-between;
   background-color: #e7ffe5;
-  margin-top: 7px;
+  /* margin-top: 7px; */
 }
 h1 {
   margin-left: 15rem;
@@ -70,7 +70,7 @@ h1 {
   margin: auto 10rem;
   top: 47%;
   font-size: 5dvh;
-  background-color: white;
+  background-color: rgb(233, 255, 234);
   padding: 15px 15px;
   border: 1.5px solid #072d16;
   border-radius: 10px;
@@ -83,20 +83,18 @@ h1 {
 .hidden {
   visibility: hidden;
 }
-.emoji {
-  font-size: 40px;
-}
-/* .card {
-  width: 80px;
-} */
 
-.restart{
-    margin-top: 2px;
-    align-items: center;
-    width:max-content;
+.restart {
+  margin-top: 2px;
+  align-items: center;
+  width: 20dvh;
+  font-size: large;
+  color: navy;
+  font-family: cursive;
+  font-style: oblique;
 }
 
-h4{
-    padding: 0;
-    margin: 20px 10px;
+h4 {
+  padding: 0;
+  margin: 20px 10px;
 }
