@@ -5,6 +5,7 @@ const live = document.querySelectorAll(".live");
 const name = document.querySelector("#name");
 // const disable = document.querySelector(".disable");
 const msg = document.querySelector("#message");
+console.log(cards);
 
 msg.style.display = "none";
 let lives = 0;
@@ -25,6 +26,7 @@ function checkCards(flipped) {
       flipped[1].querySelector(".animals").classList.add("hidden");
       name.textContent = "FOCUS!! 👀";
     }, 1000);
+
     live[lives].style.visibility = "hidden";
     lives++;
   }
@@ -41,11 +43,13 @@ brd.addEventListener("click", function (event) {
   if (flipped.length >= 2) {
     checkCards(flipped);
     flipped = [];
-    
   }
   if (lives === 5) {
-    msg.style.display = "block";
-    brd.classList.add('disable')
+    setTimeout(function () {
+      name.textContent = "";
+    }, 1000);
+    msg.style.display = "flex";
+    brd.classList.add("disable");
   }
 });
 
