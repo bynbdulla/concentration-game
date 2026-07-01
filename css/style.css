@@ -14,7 +14,7 @@ body {
   justify-content: center; /* Centers horizontally */
   align-items: center;
   background-color: rgba(255, 255, 255, 0.605);
-  font-size:8.5dvh;
+  font-size: 8.5dvh;
   font-weight: 700;
 }
 .board {
@@ -81,7 +81,9 @@ h1 {
 .hidden {
   visibility: hidden;
 }
-
-.card{
-    width: 80px;
+.emoji {
+  font-size: 40px;
 }
+/* .card {
+  width: 80px;
+} */

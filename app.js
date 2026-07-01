@@ -2,41 +2,40 @@ const brd = document.querySelector(".board");
 const cards = document.querySelectorAll(".square");
 const animals = document.querySelectorAll(".animals");
 const live = document.querySelectorAll(".live");
-const msg = document.querySelector('h1')
-const disable = document.querySelector()
+const heading = document.querySelector("h1");
+// const disable = document.querySelector(".disable");
+const msg = document.querySelector("#message");
 
-let flipped = [];
-
-
+msg.style.display = "none";
 let lives = 0;
+let flipped = [];
 function checkCards(flipped) {
   let matched = false;
   console.log(flipped);
 
   if (flipped[0].classList[1] === flipped[1].classList[1]) {
     matched = true;
-    flipped[0].style.backgroundColor = '#D6D6D6'
-    flipped[1].style.backgroundColor = '#D6D6D6'
-
-    
+    flipped[0].style.backgroundColor = "#D6D6D6";
+    flipped[1].style.backgroundColor = "#D6D6D6";
   } else {
-    
-      msg.textContent = 'Ooops 🥲'
+    heading.textContent = "Ooops 🥲";
+
     setTimeout(function () {
-        flipped[0].querySelector(".animals").classList.add("hidden");
-        flipped[1].querySelector(".animals").classList.add("hidden");
-        msg.textContent = 'FOCUS!! 👀'
+      flipped[0].querySelector(".animals").classList.add("hidden");
+      flipped[1].querySelector(".animals").classList.add("hidden");
+      heading.textContent = "FOCUS!! 👀";
     }, 1000);
     live[lives].style.visibility = "hidden";
     lives++;
-    if (lives === 5){
-        msg.textContent = ""
+    if (lives === 5) {
+      brd.classList.add("disable");
+      heading.textContent = "";
     }
   }
 }
 brd.addEventListener("click", function (event) {
   let clickedSqr = event.target;
-  
+  //   emojiH.classList.remove('disable')
   //   console.log(clickedSqr);
   let image = clickedSqr.querySelector(".animals");
   if (!clickedSqr.classList.contains("square")) return;
